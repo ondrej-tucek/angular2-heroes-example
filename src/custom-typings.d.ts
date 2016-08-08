@@ -82,10 +82,10 @@ declare namespace Reflect {
     targetKey: string | symbol,
     descriptor?: PropertyDescriptor): PropertyDescriptor;
 
-  function metadata(metadataKey: any, metadataValue: any): {
-    (target: Function): void;
-    (target: Object, propertyKey: string | symbol): void;
-  };
+//   function metadata(metadataKey: any, metadataValue: any): {
+//     (target: Function): void;
+//     (target: Object, propertyKey: string | symbol): void;
+//   };
   function defineMetadata(metadataKey: any, metadataValue: any, target: Object): void;
   function defineMetadata(
     metadataKey: any,

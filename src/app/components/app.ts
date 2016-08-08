@@ -2,9 +2,9 @@
  * Angular 2 decorators and services
  */
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { MdToolbar } from '@angular2-material/toolbar';
+// import { MdToolbar } from '@angular2-material/toolbar';
 
-import { HomeViewComponent } from '../views/home';
+// import { HomeViewComponent } from '../views/home';
 import { DashboardViewComponent } from '../views/dashboard';
 
 /*
