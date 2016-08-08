@@ -1,0 +1,26 @@
+md-input {
+    width: 100%;
+}
+
+
+input {
+    &:required {
+        box-shadow: none;
+    }
+}
+
+
+
+.txtarea {
+    padding: 5px;
+    width: 95%;
+
+    &:focus {
+        padding: 5px;
+        border-style: inset;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        border: 2px solid #009688;
+    }
+}

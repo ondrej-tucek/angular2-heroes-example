@@ -1,0 +1,17 @@
+@import '~normalize.css';
+
+@import 'partials/variables';
+@import 'partials/buttons';
+@import 'partials/inputs';
+@import 'partials/anchors';
+
+@import 'views/home';
+
+html, body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+span.active {
+  background-color: gray;
+}
