@@ -1,18 +1,27 @@
-<md-card flex style="margin: 40px 30%;">
-    <!--<div class="card-header"><h1>{{title}}</h1></div>-->
-    <md-card-title style="background-color: LightSkyBlue;">My Heroes</md-card-title>   
-    <md-card-content>        
-        <ul class="heroes">
-            <li *ngFor="let hero of heroes"
-                [class.selected]="hero === selectedHero"
-                (click)="onSelect(hero)">
-                <span class="badge">{{hero.id}}</span> {{hero.name}}
-            </li>
-        </ul>
-        <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-    </md-card-content>
-</md-card>
-
-
-    
+<md-grid-list cols="2" [style.background]="'lightblue'">
+    <md-grid-tile>
+        <md-card flex style="margin: 40px 30%;">
+            <!--<div class="card-header"><h1>{{title}}</h1></div>-->
+            <md-card-title style="background-color: LightSkyBlue;">My Heroes</md-card-title>   
+            <md-card-content>        
+                <ul class="heroes">
+                    <li *ngFor="let hero of heroes"
+                        [class.selected]="hero === selectedHero"
+                        (click)="onSelect(hero)">
+                        <span class="badge">{{hero.id}}</span> {{hero.name}}
+                    </li>
+                </ul>
+                <!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
+            </md-card-content>
+        </md-card>
+    </md-grid-tile>
+    <md-grid-tile>
+        <md-card flex style="margin: 40px 30%;">
+            <md-card-title style="background-color: LightSkyBlue;">Heroes details</md-card-title>   
+            <md-card-content>        
+                <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+            </md-card-content>
+        </md-card>
+    </md-grid-tile>
+</md-grid-list>
 

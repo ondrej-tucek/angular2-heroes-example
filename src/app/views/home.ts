@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
 import { Hero } from '../components/hero';
 import { HeroDetailComponent } from '../components/hero-detail';
-
 
 const HEROES: Hero[] = [
     { id: 11, name: 'Mr. Nice' },
@@ -26,7 +26,8 @@ const HEROES: Hero[] = [
   ],
   // We need to tell Angular's compiler which directives are in our template.
   // Doing so will allow Angular to attach our behavior to an element
-  directives: [ HeroDetailComponent
+  directives: [ HeroDetailComponent,
+                MD_GRID_LIST_DIRECTIVES
   ],
   // We need to tell Angular's compiler which custom pipes are in our template.
   pipes: [ ],
