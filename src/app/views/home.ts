@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from '../components/hero';
+import { HeroDetailComponent } from '../components/hero-detail';
 
-export class Hero {
-  id: number;
-  name: string;
-}
 
 const HEROES: Hero[] = [
     { id: 11, name: 'Mr. Nice' },
@@ -28,7 +26,7 @@ const HEROES: Hero[] = [
   ],
   // We need to tell Angular's compiler which directives are in our template.
   // Doing so will allow Angular to attach our behavior to an element
-  directives: [
+  directives: [ HeroDetailComponent
   ],
   // We need to tell Angular's compiler which custom pipes are in our template.
   pipes: [ ],
@@ -42,6 +40,7 @@ export class HomeViewComponent implements OnInit {
 //   title = 'Tour of Heroes';
   heroes = HEROES;
   selectedHero: Hero;
+
   onSelect(hero: Hero) { this.selectedHero = hero; }
 
 
