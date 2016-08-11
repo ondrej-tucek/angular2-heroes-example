@@ -2,19 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
 import { Hero } from '../components/hero';
 import { HeroDetailComponent } from '../components/hero-detail';
-
-const HEROES: Hero[] = [
-    { id: 11, name: 'Mr. Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornados' }
-];
+import { HeroService } from '../services/hero';
 
 @Component({
   // The selector is what angular internally uses
@@ -22,7 +10,7 @@ const HEROES: Hero[] = [
   // where, in this case, selector is the string 'home'
   selector: 'home-view',  // <home></home>
   // We need to tell Angular's Dependency Injection which providers are in our app.
-  providers: [
+  providers: [ HeroService
   ],
   // We need to tell Angular's compiler which directives are in our template.
   // Doing so will allow Angular to attach our behavior to an element
@@ -39,26 +27,28 @@ export class HomeViewComponent implements OnInit {
   localState = { value: '' };
 
 //   title = 'Tour of Heroes';
-  heroes = HEROES;
+  heroes = Hero[];
   selectedHero: Hero;
 
-  onSelect(hero: Hero) { this.selectedHero = hero; }
+// TypeScript public modifiers
+    constructor(private heroService: HeroService) { }
 
+    getHeroes() {
+        this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+    }
 
-  // TypeScript public modifiers
-  constructor() {
+    onSelect(hero: Hero) { this.selectedHero = hero; }
 
-  }
+    ngOnInit() {
+        console.log('hello `Home` component');
+        this.getHeroes();
+        // this.title.getData().subscribe(data => this.data = data);
+    }
 
-  ngOnInit() {
-    console.log('hello `Home` component');
-    // this.title.getData().subscribe(data => this.data = data);
-  }
-
-  submitState(value) {
-    console.log('submitState', value);
-    this.localState.value = '';
-  }
+    submitState(value) {
+        console.log('submitState', value);
+        this.localState.value = '';
+    }
 
 }
 
