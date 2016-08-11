@@ -27,7 +27,7 @@ export class HomeViewComponent implements OnInit {
   localState = { value: '' };
 
 //   title = 'Tour of Heroes';
-  heroes = Hero[];
+  heroes: Hero[];
   selectedHero: Hero;
 
 // TypeScript public modifiers
