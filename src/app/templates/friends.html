@@ -1,0 +1,10 @@
+<md-card flex style="margin: 40px 30%;">
+    <div class="header"><h2>Friends card</h2></div>
+    <md-card-content>
+        <h2>Hello from the {{componentName}}!</h2>
+        <div class="friends" *ngFor="let f of friends">
+            <h4> Name : {{f.name}} </h4> 
+            <h4> Age: {{f.age}} </h4> 
+        </div>
+    </md-card-content>
+</md-card>

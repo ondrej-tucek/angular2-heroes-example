@@ -6,6 +6,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 // import { HomeViewComponent } from '../views/home';
 import { DashboardViewComponent } from '../views/dashboard';
+import { FriendsViewComponent } from '../views/friends';
 
 /*
  * App Component
@@ -15,7 +16,7 @@ import { DashboardViewComponent } from '../views/dashboard';
   selector: 'iod-app',
   pipes: [ ],
   providers: [ ],
-  directives: [ DashboardViewComponent ],
+  directives: [ DashboardViewComponent, FriendsViewComponent ],
   encapsulation: ViewEncapsulation.None,
   template: `
     <md-content>
@@ -32,6 +33,9 @@ import { DashboardViewComponent } from '../views/dashboard';
             </a>
             <a md-button [routerLink]=" ['/dashboard'] ">
                 Dashboard
+            </a>
+            <a md-button [routerLink]=" ['/friends'] ">
+                Friends
             </a>
 
         </md-toolbar>
