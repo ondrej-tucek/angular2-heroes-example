@@ -8,6 +8,7 @@
                 <label>name: </label>
                 <input [(ngModel)]="hero.name" placeholder="name"/>
                 <button md-raised-button style="background-color: LightSkyBlue;" (click)="goBack()">Back</button>
+                <a md-button style="background-color: LightSkyBlue;" [routerLink]=" ['/dashboard'] ">Dashboard</a>
             </div>
         </div>
     </md-card-content>
