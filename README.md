@@ -6,14 +6,14 @@ See [angular.io](https://angular.io) tutorial...
 <img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen.png?raw=true" height="500">
 </p>
 
-<p align="center">
 # branch multiple-components
+<p align="center">
 <img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_multiple-components.png?raw=true" height="400">
 </p>
 
-<p align="center">
 # branch routing
-<img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_routing.png?raw=true" height="400">
+<p align="center">
+<img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_routing.png?raw=true" height="300">
 </p>
 
 # cookiecutter-angular2-iodevs
