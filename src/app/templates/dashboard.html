@@ -1,20 +1,13 @@
-<md-card flex style="margin: 40px 30%;">
-    <div class="card-header" style="background-color: LightSkyBlue;"><h2>Přihlášení do systému</h2></div>
+<md-card class="md-card-style">
+    <div class="header"><h2>Top Heroes</h2></div>
     <md-card-content>
-        <form>
-        <table style="width: 100%" cellspacing="0">
-            <tr>
-                <td><md-input placeholder="Email"></md-input></td>
-            </tr>
-            <tr>
-                <td><md-input placeholder="Heslo"></md-input></td>
-            </tr>
-            <tr>
-                <td><button md-raised-button style="background-color: LightSkyBlue;" class="button button--sent"
-                            (click)="btnLoginForm('login')">Přihlásit</button></td>
-            </tr>
-        </table>
-        </form>
+        <div class="flex-container">
+            <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="row">
+                <div class="module flex-item">
+                    <h4>{{hero.name}}</h4>
+                </div>
+            </div>
+        </div>
     </md-card-content>
 </md-card>
 

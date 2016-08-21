@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Hero } from '../components/hero';
+import { HeroService } from '../services/hero';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   // where, in this case, selector is the string 'home'
   selector: 'dashboard-view',  // <home></home>
   // We need to tell Angular's Dependency Injection which providers are in our app.
-  providers: [
+  providers: [ HeroService
   ],
   // We need to tell Angular's compiler which directives are in our template.
   // Doing so will allow Angular to attach our behavior to an element
@@ -20,26 +21,27 @@ import { Component, OnInit } from '@angular/core';
   template: require('../templates/dashboard.html')
 })
 export class DashboardViewComponent implements OnInit {
-  // Set our default values
-  localState = { value: '' };
+    // Set our default values
+    localState = { value: '' };
 
+    heroes: Hero[] = [];
 
+    constructor(private heroService: HeroService) { }
 
+    ngOnInit() {
+        console.log('hello `Dashboard` component');
+        // this.title.getData().subscribe(data => this.data = data);
 
-  // TypeScript public modifiers
-  constructor() {
+        this.heroService.getHeroes()
+            .then(heroes => this.heroes = heroes.slice(1, 5));
+    }
 
-  }
+    gotoDetail() { /* not implemented yet */}
 
-  ngOnInit() {
-    console.log('hello `Dashboard` component');
-    // this.title.getData().subscribe(data => this.data = data);
-  }
-
-  submitState(value) {
-    console.log('submitState', value);
-    this.localState.value = '';
-  }
+    submitState(value) {
+        console.log('submitState', value);
+        this.localState.value = '';
+    }
 
 }
 

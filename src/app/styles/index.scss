@@ -9,6 +9,10 @@
 @import 'views/dashboard';
 @import 'views/friends';
 
+$color_1: #607D8B;
+$color_2: #ccc;
+$font-family_1: Arial;
+
 html, body{
   height: 100%;
   font-family: Arial, Helvetica, sans-serif
@@ -17,3 +21,51 @@ html, body{
 span.active {
   background-color: gray;
 }
+
+.md-card-style {
+    margin: 40px 300px;
+    // max-height: 150px;
+	min-width: 150px;
+}
+.header {
+    color:#545454;
+    background:#02A8F4;
+    margin-bottom:15px;
+    padding:5px;
+    box-shadow:2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+	max-height: 150px;
+	min-width: 150px;
+}
+
+
+label {
+	display: inline-block;
+	width: 3em;
+	margin: .5em 0;
+	color: $color_1;
+	font-weight: bold;
+}
+input {
+	height: 2em;
+	font-size: 1em;
+	padding-left: .4em;
+}
+// button {
+// 	margin-top: 20px;
+// 	font-family: $font-family_1;
+// 	background-color: #eee;
+// 	border: none;
+// 	padding: 5px 10px;
+// 	border-radius: 4px;
+// 	cursor: pointer;
+// 	cursor: hand;
+// 	&:hover {
+// 		background-color: #cfd8dc;
+// 	}
+// 	&:disabled {
+// 		background-color: #eee;
+// 		color: $color_2;
+// 		cursor: auto;
+// 	}
+// }
