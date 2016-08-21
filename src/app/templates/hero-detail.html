@@ -1,9 +1,14 @@
-<div *ngIf="hero">
-    <h2>{{hero.name}} details!</h2>
-    <div><label>id: </label>{{hero.id}}</div>
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name"/>
-    </div>
-    <button (click)="goBack()">Back</button>
-</div>
+<md-card class="md-card-style">
+    <div class="header"><h2>Heroes details</h2></div>
+    <md-card-content>
+        <div *ngIf="hero">
+            <h2>{{hero.name}} details!</h2>
+            <div><label>id: </label>{{hero.id}}</div>
+            <div>
+                <label>name: </label>
+                <input [(ngModel)]="hero.name" placeholder="name"/>
+                <button md-raised-button style="background-color: LightSkyBlue;" (click)="goBack()">Back</button>
+            </div>
+        </div>
+    </md-card-content>
+</md-card>

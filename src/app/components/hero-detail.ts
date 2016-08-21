@@ -30,7 +30,7 @@ export class HeroDetailComponent implements OnInit {
     }
 
     goBack() {
-        // window.history.back();
-        window.location.href = '/dashboard';
+        window.history.back();
+        // window.location.href = '/dashboard';
     }
 }
