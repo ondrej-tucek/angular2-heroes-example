@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
+
 import { Hero } from '../components/hero';
 import { HeroDetailComponent } from '../components/hero-detail';
 import { HeroService } from '../services/hero';
@@ -31,7 +33,8 @@ export class HomeViewComponent implements OnInit {
   selectedHero: Hero;
 
 // TypeScript public modifiers
-    constructor(private heroService: HeroService) { }
+    constructor(private router: Router,
+                private heroService: HeroService) { }
 
     getHeroes() {
         this.heroService.getHeroes().then(heroes => this.heroes = heroes);
@@ -48,6 +51,10 @@ export class HomeViewComponent implements OnInit {
     submitState(value) {
         console.log('submitState', value);
         this.localState.value = '';
+    }
+
+    gotoDetail(): void {
+        this.router.navigate(['/detail', this.selectedHero.id]);
     }
 
 }
