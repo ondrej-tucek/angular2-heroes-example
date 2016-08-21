@@ -6,6 +6,7 @@ import { Hero } from './hero';
 
 @Component({
     selector: 'my-hero-detail',
+    providers: [ HeroService ],
     template: require('../templates/hero-detail.html')
 })
 

@@ -53,10 +53,6 @@ export class HomeViewComponent implements OnInit {
         this.localState.value = '';
     }
 
-    gotoDetail(): void {
-        this.router.navigate(['/detail', this.selectedHero.id]);
-    }
-
 }
 
 
