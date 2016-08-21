@@ -13,7 +13,7 @@ See [angular.io](https://angular.io) tutorial...
 
 # branch routing
 <p align="center">
-<img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_routing.png?raw=true" height="300">
+<img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_routing-bc.png?raw=true" height="300">
 </p>
 
 # cookiecutter-angular2-iodevs
