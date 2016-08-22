@@ -12,8 +12,13 @@
                     </li>
                 </ul>
                 <!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
+                <div *ngIf="selectedHero">
+                    <h2>{{selectedHero.name | uppercase}} is my hero</h2>
+                    <button md-raised-button style="background-color: LightSkyBlue;" (click)="gotoDetail()">View Details</button>
+                </div>
             </md-card-content>
         </md-card>
+
     </md-grid-tile>
     <md-grid-tile>
         <my-hero-detail [hero]="selectedHero"></my-hero-detail>

@@ -52,7 +52,9 @@ export class HomeViewComponent implements OnInit {
         console.log('submitState', value);
         this.localState.value = '';
     }
-
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedHero.id]);
+  }
 }
 
 
