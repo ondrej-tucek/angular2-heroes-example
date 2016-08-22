@@ -9,6 +9,8 @@
                         [class.selected]="hero === selectedHero"
                         (click)="onSelect(hero)">
                         <span class="badge">{{hero.id}}</span> {{hero.name}}
+                        <i class="material-icons">mode_edit</i>
+                        <i class="material-icons">delete_forever</i>
                     </li>
                 </ul>
                 <!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
@@ -19,4 +21,8 @@
         <my-hero-detail [hero]="selectedHero"></my-hero-detail>
     </md-grid-tile>
 </md-grid-list>
-
+    <span class="btnAddProduct">
+        <button md-button md-fab>
+            <md-icon class="md-24">add</md-icon>
+        </button>
+    </span>
