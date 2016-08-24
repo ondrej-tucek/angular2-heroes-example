@@ -37,6 +37,9 @@ import { FriendsViewComponent } from '../views/friends';
             <a md-button [routerLink]=" ['/friends'] ">
                 Friends
             </a>
+            <a md-button [routerLink]=" ['/about'] ">
+                About
+            </a>
 
         </md-toolbar>
 

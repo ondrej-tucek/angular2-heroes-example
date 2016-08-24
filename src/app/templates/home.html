@@ -1,19 +1,28 @@
 <md-grid-list cols="2" [style.background]="'lightblue'">
     <md-grid-tile>
         <md-card style="margin: 40px 30%;">
-            <!--<div class="card-header"><h1>{{title}}</h1></div>-->
-            <md-card-title style="background-color: LightSkyBlue;">My Heroes</md-card-title>   
-            <md-card-content>        
-                <ul class="heroes">
-                    <li *ngFor="let hero of heroes"
-                        [class.selected]="hero === selectedHero"
-                        (click)="onSelect(hero)">
-                        <span class="badge">{{hero.id}}</span> {{hero.name}}
-                        <i class="material-icons">mode_edit</i>
-                        <i class="material-icons">delete_forever</i>
-                    </li>
-                </ul>
-                <!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
+            <button md-mini-fab style="top: 15px; right: 12px;"><md-icon class="md-24">add</md-icon></button>
+            <div class="header"><h2>My Heroes</h2></div>   
+            <md-card-content>     
+                <table id="tbl-heroes">
+                <!--<thead>
+                    <tr>
+                    <th></th>
+                    <th>Header</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                    </tr>
+                </thead>-->
+                <tbody>
+                    <tr *ngFor="let hero of heroes"
+                        [class.selected]="hero === selectedHero">
+                    <td id="id">{{hero.id}}</td>
+                    <td (click)="onSelect(hero)">{{hero.name}}</td>
+                    <td (click)="gotoDetail()"><i class="material-icons">mode_edit</i></td>
+                    <td><i class="material-icons">delete_forever</i></td>
+                    </tr>
+                </tbody>
+                </table>
             </md-card-content>
         </md-card>
     </md-grid-tile>
@@ -21,8 +30,5 @@
         <my-hero-detail [hero]="selectedHero"></my-hero-detail>
     </md-grid-tile>
 </md-grid-list>
-    <span class="btnAddProduct">
-        <button md-button md-fab>
-            <md-icon class="md-24">add</md-icon>
-        </button>
-    </span>
+
+    

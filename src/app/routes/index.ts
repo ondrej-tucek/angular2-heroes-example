@@ -4,7 +4,7 @@ import { HomeViewComponent } from '../views/home';
 import { DashboardViewComponent } from '../views/dashboard';
 import { FriendsViewComponent } from '../views/friends';
 import { HeroDetailComponent } from '../components/hero-detail';
-// import { AboutViewComponent } from '../views/about';
+import { AboutViewComponent } from '../views/about';
 
 
 export const routes: RouterConfig = [
@@ -12,8 +12,8 @@ export const routes: RouterConfig = [
     {path: 'home', component: HomeViewComponent},
     {path: 'dashboard', component: DashboardViewComponent},
     {path: 'friends', component: FriendsViewComponent},
-    {path: 'detail/:id', component: HeroDetailComponent}
-    // {path: 'about', component: AboutViewComponent},
+    {path: 'detail/:id', component: HeroDetailComponent},
+    {path: 'about', component: AboutViewComponent}
     // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
     // { path: 'about', loader: () => require('es6-promise!../views/about')('AboutViewComponent')
 ];

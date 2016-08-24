@@ -40,6 +40,10 @@ export class HomeViewComponent implements OnInit {
         this.heroService.getHeroes().then(heroes => this.heroes = heroes);
     }
 
+    gotoDetail(): void {
+        this.router.navigate(['/detail', this.selectedHero.id]);
+    }
+
     onSelect(hero: Hero) { this.selectedHero = hero; }
 
     ngOnInit() {

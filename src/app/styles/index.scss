@@ -8,6 +8,7 @@
 @import 'views/home';
 @import 'views/dashboard';
 @import 'views/friends';
+@import 'views/about';
 
 $color_1: #607D8B;
 $color_2: #ccc;
@@ -31,19 +32,13 @@ span.active {
 .header {
     color:#545454;
     background:#02A8F4;
-    margin-bottom:15px;
+    margin-bottom:25px;
     padding:5px;
-    box-shadow:2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+    // box-shadow:2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
 	max-height: 150px;
 	min-width: 150px;
-}
-
-.btnAddProduct {
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
 }
 
 label {
