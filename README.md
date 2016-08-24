@@ -19,7 +19,7 @@ See [angular.io](https://angular.io) tutorial...
 # branch routing-table
 Ul/li list was remade to table.
 <p align="center">
-<img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_md-card-heroes.png?raw=true" height="300">
+<img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_md-card-heroes.png?raw=true" height="350">
 </p>
 
 # cookiecutter-angular2-iodevs
