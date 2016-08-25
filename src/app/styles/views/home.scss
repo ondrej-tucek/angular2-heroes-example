@@ -50,6 +50,8 @@ $tbl-border-clr: white;
     font-size: small;
     color: white;
     background-color: #607D8B;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
     border-bottom: $tbl-border-thcks solid $tbl-border-clr;
 }
 
