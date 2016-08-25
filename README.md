@@ -17,7 +17,7 @@ See [angular.io](https://angular.io) tutorial...
 </p>
 
 # branch routing-table
-ul/li list was remade to table and also added edit/delete/add icons.
+ul/li list was remade to table and also added edit/delete/add icons. Delete and add hero isn't functional here.
 <p align="center">
 <img src="https://github.com/ondrej-tucek/angular2-heroes-example/blob/master/src/assets/img/app-screen_md-card-heroes.png?raw=true" height="400">
 </p>
