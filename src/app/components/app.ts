@@ -2,6 +2,16 @@
  * Angular 2 decorators and services
  */
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+// import { BrowserModule }  from '@angular/platform-browser';
+// import { FormsModule }    from '@angular/forms';
+// import { HttpModule }     from '@angular/http';
+
+// Imports for loading & configuring the in-memory web api
+// import { XHRBackend } from '@angular/http';
+
+// import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
+// import { InMemoryDataService }               from './in-memory-data.service';
+
 // import { MdToolbar } from '@angular2-material/toolbar';
 
 // import { HomeViewComponent } from '../views/home';
@@ -15,7 +25,10 @@ import { FriendsViewComponent } from '../views/friends';
 @Component({
   selector: 'iod-app',
   pipes: [ ],
-  providers: [ ],
+  providers: [
+    // { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
+    // { provide: SEED_DATA,  useClass: InMemoryDataService }     // in-mem server data
+   ],
   directives: [ DashboardViewComponent, FriendsViewComponent ],
   encapsulation: ViewEncapsulation.None,
   template: `
