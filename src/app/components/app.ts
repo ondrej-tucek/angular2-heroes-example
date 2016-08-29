@@ -7,10 +7,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 // import { HttpModule }     from '@angular/http';
 
 // Imports for loading & configuring the in-memory web api
-// import { XHRBackend } from '@angular/http';
+import { XHRBackend, HTTP_PROVIDERS } from '@angular/http';
 
-// import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
-// import { InMemoryDataService }               from './in-memory-data.service';
+import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
+import { InMemoryDataService }               from '../services/in-memory-data.service';
 
 // import { MdToolbar } from '@angular2-material/toolbar';
 
@@ -26,8 +26,9 @@ import { FriendsViewComponent } from '../views/friends';
   selector: 'iod-app',
   pipes: [ ],
   providers: [
-    // { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
-    // { provide: SEED_DATA,  useClass: InMemoryDataService }     // in-mem server data
+    HTTP_PROVIDERS,
+    { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
+    { provide: SEED_DATA,  useClass: InMemoryDataService }     // in-mem server data
    ],
   directives: [ DashboardViewComponent, FriendsViewComponent ],
   encapsulation: ViewEncapsulation.None,

@@ -7,8 +7,9 @@ $tbl-border-clr: white;
     color: white;
 }
 
-#tbl-heroes {
+.tbl-heroes {
     font-family: 'Arial';
+    width: 250px;
     // margin: 25px auto;
     // border: 1px solid #eee;
     // border-bottom: 12px solid #00cccc;
@@ -43,7 +44,8 @@ $tbl-border-clr: white;
         border-top: $tbl-border-thcks solid $tbl-border-clr;
     }
 }
-#id {
+
+.id {
     // display: inline-block;
     // padding: 0.8em 0.7em 0 0.7em;
     position: relative;
